@@ -462,7 +462,6 @@ public class WeatherFragment extends Fragment {
         feedbackMsg[6] = tempDo;
         feedbackMsg[7] = weatherDo;
 
-        final FeedbackTask feedbackTask = new FeedbackTask();
 
         feedback.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -473,6 +472,7 @@ public class WeatherFragment extends Fragment {
                 // CustomDialog.java에서 callfunction 함수 매개변수 설정 시 괄호 안에 넘겨받을 매개변수 설정 가능
                 customDialog.callFunction();
                 */
+                FeedbackTask feedbackTask = new FeedbackTask();
                 Toast.makeText(container.getContext(), "의견 감사합니다.", Toast.LENGTH_SHORT).show();
                 feedbackTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, feedbackMsg);
             }
