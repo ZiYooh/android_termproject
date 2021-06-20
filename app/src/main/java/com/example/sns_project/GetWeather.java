@@ -27,7 +27,7 @@ public class GetWeather{
 
         String hh = timedata.substring(9, 11);
         hh = hh + "00";
-        if (hh == "0000" || hh == "0100") {
+        if (hh.equals("0000") || hh.equals("0100")) {
             timedata = yesterday.format(DateTimeFormatter.ofPattern("yyyyMMdd HHmmss"));
         }
 
